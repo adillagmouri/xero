@@ -31,4 +31,25 @@ explore: xero_sales {
     sql_on: ${xero_sales.country}=${data_europe.country} ;;
     relationship: many_to_one
   }
+  join: data_africa{
+    type: left_outer
+    sql_on: ${xero_sales.country}=${data_africa.country};;
+    relationship: many_to_one
+  }
+  join: data_southamerika{
+    type: left_outer
+    sql_on: ${xero_sales.country}=${data_southamerika.country};;
+    relationship: many_to_one
+  }
+  join: data_usa{
+    type: left_outer
+    sql_on: ${xero_sales.country}=${data_usa.state};;
+    relationship: many_to_one
+  }
+  join: orderlist{
+    type: left_outer
+    sql_on: ${xero_sales.country}=${orderlist.country};;
+    relationship: many_to_one
+  }
 }
+explore: orderlist {}
