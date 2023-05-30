@@ -43,6 +43,11 @@ view: xero_sales {
     sql: ${TABLE}.date ;;
   }
 
+  dimension: Year {
+    type: string
+    sql: concat('20', substring(${TABLE}.date,4,2))  ;;
+  }
+
   dimension: google_ads {
     type: string
     sql: ${TABLE}.Google_ads ;;
