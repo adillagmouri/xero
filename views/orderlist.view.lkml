@@ -16,7 +16,7 @@ view: orderlist {
     sql: ${TABLE}.AccountCode ;;
   }
 
-  dimension: continant {
+  dimension: continent {
     type: string
     sql: ${TABLE}.continant ;;
   }
@@ -115,7 +115,6 @@ view: orderlist {
     sql: ${TABLE}.LineAmount ;;
   }
 
-
   dimension: pocity {
     type: string
     sql: ${TABLE}.POCity ;;
@@ -160,8 +159,8 @@ view: orderlist {
     type: count
     drill_fields: []
   }
-  measure: sum_Line_amount{
+  measure: sum_line_amount{
     type: sum
-    sql: ${line_amount};;
+    sql: ${line_amount} ;;
   }
 }

@@ -51,7 +51,7 @@ view: data_usa {
     sql: ${TABLE}.Contacts ;;
   }
 
-  dimension: continant {
+  dimension: continent {
     type: string
     sql: ${TABLE}.continant ;;
   }
@@ -197,6 +197,7 @@ view: data_usa {
 
   dimension: state {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}.state ;;
   }
 

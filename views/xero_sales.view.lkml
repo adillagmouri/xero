@@ -21,9 +21,10 @@ view: xero_sales {
     sql: ${TABLE}.business_type ;;
   }
 
-  dimension: continant {
+  dimension: continent {
     type: string
-    sql: ${TABLE}.continant ;;
+    # sql: ${TABLE}.continant ;;
+    sql: concat(upper(substring(${TABLE}.continant,1,1)),substring(${TABLE}.continant,2,length(${TABLE}.continant)));;
   }
 
   dimension: countries_states {
@@ -69,6 +70,7 @@ view: xero_sales {
   measure: total_sales {
     type: sum
     sql: ${sales} ;;
+    value_format_name: eur_0
   }
 
   measure: average_sales {

@@ -53,3 +53,6 @@ explore: xero_sales {
   }
 }
 explore: orderlist {}
+explore: data_africa {}
+explore: data_usa {}
+explore: data_europe {}
