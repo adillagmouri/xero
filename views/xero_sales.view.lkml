@@ -76,6 +76,7 @@ view: xero_sales {
     type: sum
     sql: ${sales} ;;
     value_format_name: eur_0
+    drill_fields: [country, countries_states, brand_awareness, google_ads, lead_gen]
   }
 
   measure: average_sales {
